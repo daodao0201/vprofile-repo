@@ -101,7 +101,7 @@
             </div>
         </spring:bind>
 
-        <button class="btn btn-custom btn-lg  btn-block" type="submit">SIGN UP</button>
+        <button name="register-test" class="btn btn-custom btn-lg  btn-block" type="submit">SIGN UP</button>
     </form:form>
 
 </div>
