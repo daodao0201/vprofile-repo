@@ -13,6 +13,7 @@ public class ChromeScript {
         WebDriver driver = new ChromeDriver();
 
         try {
+            //get url
             driver.get(url);
             driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 
