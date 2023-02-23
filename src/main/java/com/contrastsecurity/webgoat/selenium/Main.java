@@ -11,11 +11,9 @@ public class Main {
     static String contextRoot = "/WebGoat"; // Context root
     static private String port ="null"; // Port
     static private boolean ssl = false; // HTTPS (true) or HTTP (false - default)
-    static private boolean headless = false;
     static private boolean chrome = false;
     static private boolean firefox = false;
     static private String driverPath = "null";
-    static private String browserBin = "null";
 
     public static void main(String[] args) {
         String port_regex = "([0-9]|[1-8][0-9]|9[0-9]|[1-8][0-9]{2}|9[0-8][0-9]|99[0-9]|[1-8][0-9]{3}|9[0-8][0-9]{2}|99[0-8][0-9]|999[0-9]|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])";
@@ -58,18 +56,10 @@ public class Main {
                 case "-ssl":
                     ssl = true;
                     break;
-                case "-headless":
-                    headless = true;
-                    break;
                 case "-driver":
                     if (i == args.length -1 || args[i + 1].charAt(0) == '-')
                         throw new IllegalArgumentException("Expected argument after: " + args[i]);
                     driverPath = args[i++ + 1];
-                    break;
-                case "-bin":
-                    if (i == args.length -1 || args[i + 1].charAt(0) == '-')
-                        throw new IllegalArgumentException("Expected argument after: " + args[i]);
-                    browserBin = args[i++ + 1];
                     break;
                 case "-cr":
                     if (i == args.length -1 || args[i + 1].charAt(0) == '-')
@@ -108,9 +98,9 @@ public class Main {
         System.out.println("ssl: " + ssl);
         System.out.println("url: " + baseUrl);
         if (firefox) {
-            FirefoxScript.run(un, em, pw, baseUrl, headless, driverPath, browserBin);
+            FirefoxScript.run(un, em, pw, baseUrl, driverPath);
         } else {
-            ChromeScript.run(un, em, pw, baseUrl, headless, driverPath, browserBin);
+            ChromeScript.run(un, em, pw, baseUrl, driverPath);
         }
     }
 }

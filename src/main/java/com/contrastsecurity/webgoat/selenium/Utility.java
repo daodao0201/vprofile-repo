@@ -31,7 +31,7 @@ public final class Utility {
             case "Mac OS X":
                 return (firefox ? "/Applications/Firefox.app/Contents/MacOS/geckodriver" : "/Applications/Google Chrome.app/Contents/MacOS/chromedriver");
             case "Windows":
-                return (firefox ? "C:\\Program Files\\Mozilla Firefox\\geckodriver.exe" : "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+                return (firefox ? "C:\\driver\\geckodriver.exe" : "C:\\driver\\chromedriver.exe");
             default:
                 return (firefox ? "/usr/lib64/firefox/geckodriver" : "/usr/lib/chromium-browser/chromedriver");
         }
