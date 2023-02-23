@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ChromeScript {
-    public static void run(String un, String em, String pw, String url, String driverPath) {
+    public static void run(String un, String em, String pw, String url, String driverPath) throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver", driverPath);
         WebDriver driver = new ChromeDriver();
@@ -31,7 +31,8 @@ public class ChromeScript {
             }
             System.out.println("Successfully finished Chrome script!");
         } finally {
-            driver.quit();
+            Thread.sleep(10000);
+            driver.close();
         }
     }
 }

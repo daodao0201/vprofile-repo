@@ -30,7 +30,7 @@ public class FirefoxScript {
                 driver.findElement(By.xpath("//button[@id='register']")).click();
             }
         } finally {
-            Thread.sleep(2000);
+            Thread.sleep(10000);
             driver.close();
         }
     }
