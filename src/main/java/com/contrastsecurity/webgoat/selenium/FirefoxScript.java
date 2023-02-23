@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class FirefoxScript {
-    public static void run(String un, String em, String pw, String url, String gecko) {
+    public static void run(String un, String em, String pw, String url, String gecko) throws InterruptedException {
 
         System.setProperty("webdriver.gecko.driver", gecko);
         FirefoxDriver driver = new FirefoxDriver();
@@ -30,7 +30,8 @@ public class FirefoxScript {
                 driver.findElement(By.xpath("//button[@id='register']")).click();
             }
         } finally {
-            driver.quit();
+            Thread.sleep(2000);
+            driver.close();
         }
     }
 }
