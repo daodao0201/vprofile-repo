@@ -1,0 +1,13 @@
+SNAP-REPO=vprofile-snap
+NEXUS-USER=admin
+NEXUS-PASS=admin123
+RELEASE-REPO=vprofile-release
+NEXUS-GRP-REPO=vprofile-gr
+CENTRAL-REPO=vprofile-central
+CENTRAL-REPO-01=vprofile-central-01
+NEXUSIP=172.31.92.223
+NEXUSPORT=8081
+
+slack: xoxb-4745995144704-4707787567607-v2gKAecTbRCasGGtqbD35qqR
+
+ad9dc46c16d9d43f2af3c7c269f07ad26b61d6f1

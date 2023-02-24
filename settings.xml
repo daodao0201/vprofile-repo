@@ -33,6 +33,12 @@
       <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
+    <mirror>
+      <id>${CENTRAL-REPO-01}</id>
+      <name>${CENTRAL-REPO-01}</name>
+      <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
   </mirrors>
 
 </settings>
